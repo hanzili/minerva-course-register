@@ -1,0 +1,38 @@
+{
+  "manifest_version": 3,
+  "name": "Minerva Course Auto-Register",
+  "version": "1.0.0",
+  "description": "Automate course registration on McGill's Minerva platform during Add/Drop period. Save time by automating the registration process.",
+  "icons": {
+    "16": "icons/icon16.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  },
+  "author": "Hanzi Li",
+  "homepage_url": "https://github.com/hanzili/minerva-course-register",
+  "permissions": [
+    "activeTab",
+    "storage",
+    "scripting"
+  ],
+  "host_permissions": [
+    "https://horizon.mcgill.ca/"
+  ],
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "icons/icon16.png",
+      "48": "icons/icon48.png",
+      "128": "icons/icon128.png"
+    }
+  },
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://horizon.mcgill.ca/*"],
+      "js": ["content.js"]
+    }
+  ]
+} 

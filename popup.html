@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Minerva Course Auto-Register</title>
+  <style>
+    body {
+      width: 300px;
+      padding: 10px;
+    }
+    .crn-input {
+      width: 100%;
+      margin: 5px 0;
+    }
+    button {
+      width: 100%;
+      margin: 5px 0;
+      padding: 8px;
+    }
+    .status {
+      margin-top: 10px;
+      padding: 10px;
+      border-radius: 4px;
+    }
+  </style>
+</head>
+<body>
+  <h2>Minerva Course Auto-Register</h2>
+  <div>
+    <label>Enter CRNs (one per line):</label>
+    <textarea id="crnInput" class="crn-input" rows="5" placeholder="Enter CRNs here..."></textarea>
+  </div>
+  <div>
+    <label>Check frequency (minutes):</label>
+    <input type="number" id="frequencyInput" value="30" min="5" max="300" class="crn-input">
+  </div>
+  <button id="startRegister">Start Auto-Registration</button>
+  <button id="stopRegister">Stop</button>
+  <div id="status" class="status"></div>
+  <script src="popup.js"></script>
+</body>
+</html> 
