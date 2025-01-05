@@ -1,3 +1,7 @@
+document.getElementById('frequencyInput').addEventListener('input', function() {
+    document.getElementById('frequencyValue').textContent = this.value;
+});
+
 document.getElementById('startRegister').addEventListener('click', async () => {
   try {
     const [tab] = await chrome.tabs.query({ active: true, currentWindow: true });
